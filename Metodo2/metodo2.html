@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Metodo1/styles.css" />
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="contenedor">
+        <h1>Metodo: Newton Newton-Raphson</h1>
+        <div class="separador"></div>
+        <nav>
+            <a href="/index.html">Regresar</a>
+            <a href="/Excel/Punto fijo (2) (1).xlsx">Metodo</a>
+        </nav>
+
+        <h2>Definición</h2>
+        <p>El método de Newton-Raphson es un enfoque numérico para encontrar raíces de funciones, es decir, valores x tales que f(x). Es uno de los método más rápidos para este propósito cuando la función es bien comportada cerca de la raíz</p>
+        <p></p>
+        <p>El método se basa en usar la derivada para aproximar la función con una línea tangente y luego usar la intersección de esta tangente con el eje x como una mejor aproximación a la raíz. Esto se repite hasta que se alcanza un nivel de precisión deseado.</p>
+        <h2>Antecedentes del Método</h2>
+        <h3> Isaac Newton (1642-1727)</h3>
+<p>Fue un matemático y físico inglés, uno de los más influyentes de la historia.
+Desarrolló la base del método alrededor de 1669, como parte de su trabajo sobre análisis numérico y cálculo.
+Su formulación original se basaba en el desarrollo en series para resolver ecuaciones.</p>
+<p>Newton aplicó este método principalmente a funciones polinómicas.</p>
+<h3.>Joseph Raphson (1648-1715)</h3.>
+<p>Matemático británico que publicó en 1690 una versión mejorada del método de Newton.
+Su obra "Analysis Aequationum Universalis" presentó una descripción más general y práctica del método, que no requería una interpretación geométrica.
+La versión de Raphson es la más cercana a cómo usamos el método hoy en día.</p>
+<h3>Ralphson vs Newton</h3>
+<p>Aunque a menudo se le atribuye a Newton el método, la forma moderna que usamos fue mejor explicada por Raphson.
+Es por esto que el método es conocido como Newton-Raphson, reconociendo las contribuciones de ambos.</p>
+        <h2>Relación</h2>
+        <h3>Meétodo de bisección</h3>
+        <p>Divide un intervalo en dos partes y elige la mitad donde hay un cambio de signo.</p>
+        <p>Más lento, pero siempre converge si la función es continua.</p>
+        <h3>Método de falsa posición:</h3>
+        <p>Similar a la bisección, pero en lugar de usar el punto medio, usa una recta secante para estimar la raíz.</p>
+        <p>Más rápido que la bisección en algunos casos.</p>
+        <h3>Metodo de la secante</h3>
+        <p>Muy parecido a Newton-Raphson, pero no necesita derivada.</p>
+        <p>Usa dos puntos anteriores para aproximar la derivada.</p>
+
+        <h2>Aplicación</h2>
+        <p>
+            Para calcular un sistema de cuánto combustible queda en el tanque de un auto, y la relación entre el nivel del sensor y el volumen de combustible no es lineal (es una ecuación complicada).
+        </p>
+
+        <h2>Algoritmo</h2>
+        <h2>Pasos del método:</h2>
+    <ol>
+    <li><strong>Elección del punto inicial <em>x<sub>0</sub></em>:</strong> Elige un punto cercano a la raíz esperada.</li>
+    <li><strong>Evaluación de la función y su derivada:</strong> Calcula <code>f(x<sub>n</sub>)</code> y <code>f'(x<sub>n</sub>)</code>.</li>
+    <li><strong>Actualizar el punto:</strong> Usa la fórmula para calcular el siguiente valor <code>x<sub>n+1</sub></code>.</li>
+    <li><strong>Repetir hasta converger:</strong> Continúa iterando hasta que la diferencia entre <code>x<sub>n+1</sub></code> y <code>x<sub>n</sub></code> sea suficientemente pequeña, es decir, cuando:<br>
+        <code>|x<sub>n+1</sub> − x<sub>n</sub>| &lt; tolerancia</code>
+    </li>
+    <li><strong>Verificar el resultado:</strong> Asegúrate que el punto encontrado realmente haga <code>f(x) ≈ 0</code>.</li>
+    </ol>
+    </div>
+
+    <script src="/js/particles.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Bisección</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método : Bisección</h1>
+    <div class="separador"></div>
+
+    <nav>
+      <a href="/index.html">Regresar</a>
+      <a href="/Excel/Metodo de bisección o intervalo medio  (2).xlsx de bisección o intervalo medio  (2).xlsx fijo (2) (1).xlsx">Metodo</a>
+    </nav>
+
+    <h2>1. Definición</h2>
+    <p>El método de bisección es un algoritmo numérico que permite encontrar una raíz real de una función continua <em>f(x)</em> en un intervalo cerrado [a, b], donde la función cambia de signo (es decir, f(a)·f(b) &lt; 0). Se basa en dividir iterativamente el intervalo a la mitad, buscando el subintervalo donde ocurre el cambio de signo.</p>
+
+    <h2>2. Antecedentes</h2>
+    <p>Este método es uno de los más antiguos conocidos para resolver ecuaciones, usado desde la época de los griegos. Fue formalizado matemáticamente en el siglo XVII. Aunque tiene una convergencia lenta, es valorado por su simplicidad, robustez y certeza de convergencia.</p>
+
+    <h2>3. Relación con Otros Métodos</h2>
+    <p><strong>Método de la falsa posición (regla falsa):</strong> Similar en estructura, pero ajusta el punto de evaluación usando una recta secante.</p>
+    <p><strong>Método de Newton-Raphson:</strong> Utiliza derivadas para aproximar raíces con mayor rapidez, pero requiere condiciones específicas.</p>
+    <p><strong>Método de la secante:</strong> Alternativa al método de Newton que no necesita derivadas.</p>
+    <p>Todos estos son métodos iterativos para encontrar raíces de funciones no lineales.</p>
+
+    <h2>4. Fórmula Matemática</h2>
+    <p>Para un intervalo [a, b] tal que f(a)·f(b) &lt; 0, se define:</p>
+    <p><strong>c = (a + b) / 2</strong></p>
+    <p>Luego se evalúa f(c). Dependiendo del signo:</p>
+    <ul>
+      <li>Si f(a)·f(c) &lt; 0, la raíz está en [a, c]</li>
+      <li>Si f(c)·f(b) &lt; 0, la raíz está en [c, b]</li>
+      <li>Si f(c) = 0, se ha encontrado la raíz exacta</li>
+    </ul>
+    <p>Se repite hasta que |b - a| &lt; ε (tolerancia deseada).</p>
+
+    <h2>5. Algoritmo Paso a Paso</h2>
+    <ol>
+      <li>Elegir un intervalo [a, b] donde f(a)·f(b) &lt; 0</li>
+      <li>Calcular c = (a + b) / 2</li>
+      <li>Evaluar f(c)</li>
+      <li>Si |f(c)| &lt; ε, c es la raíz</li>
+      <li>Si f(a)·f(c) &lt; 0, b = c</li>
+      <li>Si f(c)·f(b) &lt; 0, a = c</li>
+      <li>Repetir hasta converger</li>
+    </ol>
+
+    <h2>6. Aplicaciones</h2>
+    <ul>
+      <li>Resolución de ecuaciones no lineales</li>
+      <li>Ingeniería: encontrar puntos de equilibrio</li>
+      <li>Economía: intersecciones de oferta y demanda</li>
+      <li>Situaciones donde la derivada no está disponible</li>
+    </ul>
+  </div> <!-- Cierre correcto del contenedor -->
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
