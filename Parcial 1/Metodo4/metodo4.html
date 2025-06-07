@@ -15,8 +15,9 @@
     <h1>Metodo: Punto fijo </h1>
     <div class="separador"></div> <!-- Línea separadora -->
     <nav>
-<a href="/Parcial 1/Metodo1/metodo1.html">Regresar</a>
+    <a href="/Parcial 1/menu.html">Regresar</a>
     <a href="/Parcial 1/Excel/Punto fijo (2) (1).xlsx">Metodo</a>
+    <a href="/Parcial 1/Metodo4/Metodo de punto fijo_250606_203918.pdf">Ejemplo</a>
     </nav>
     
     <h2>Definicion</h2>
@@ -25,6 +26,35 @@
     <p>Este método tiene su origen en el análisis matemático y en los estudios sobre funciones continuas y convergencia.
 Está relacionado con el Teorema del Punto Fijo de Banach, que establece condiciones bajo las cuales una función tiene un punto fijo y el método converge.
 Se usa desde principios del siglo XX en estudios de análisis numérico.</p>
+<h2>Formula</h2>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>x</mi>
+    <mrow>
+      <mi>r</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mi>g</mi>
+  <mo>(</mo>
+  <msub><mi>x</mi><mi>r</mi></msub>
+  <mo>)</mo>
+</math>
+<h2>Algoritmo</h2>
+
+  <ul>
+    <li>Transformas la ecuación \( f(x) = 0 \) en una forma como \( x = g(x) \).</li>
+    <li>Eliges un valor inicial \( x_0 \).</li>
+    <li>Luego, calculas repetidamente:<br><br>
+      \( x_{n+1} = g(x_n) \)
+    </li>
+    <li>Si el método converge, \( x_n \) se va acercando a la solución.</li>
+  </ul>
+
+<h2>¿Para qué sirve?</h2>
+  <p>Para encontrar un valor \( x \) tal que \( x = g(x) \).</p>
 <h2>Relaicon con otros métodos</h2>
 <p>Se relaciona con el método de Newton-Raphson, ya que este también puede ser visto como un tipo de punto fijo (con una transformación específica).
 Tiene una fuerte conexión con métodos de iteración funcional, y con otros algoritmos que requieren resolver ecuaciones no lineales.

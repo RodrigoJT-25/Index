@@ -14,7 +14,8 @@
     <div class ="contenedor">
     <h1>Metodo: Gauss-Jordan </h1>
     <div class="separador"></div> <!-- Línea separadora -->
-    <a href="/Parcial 1/Metodo1/metodo1.html">Regresar</a>
+    <a href="/Parcial 1/menu.html">Regresar</a>
+    <a href="/Parcial 1/Metodo1/Bisección o intervalo medio _250606_204535.pdf" target="_blank">Ejemplo</a>
     <h2>Definicion</h2>
     <h3>Método de Gauss</h3>
     <p>Es un procedimiento algorítmico para resolver sistemas de ecuaciones lineales. Consiste en transformar el sistema en una forma escalonada superior utilizando operaciones elementales en las filas de la matriz aumentada del sistema.</p>
@@ -29,6 +30,30 @@ Ambos métodos surgieron como herramientas para resolver sistemas de ecuaciones 
 <p>Se relaciona con el método de Newton-Raphson, ya que este también puede ser visto como un tipo de punto fijo (con una transformación específica).
 Tiene una fuerte conexión con métodos de iteración funcional, y con otros algoritmos que requieren resolver ecuaciones no lineales.
 Comparado con métodos como bisección o falsa posición, no necesita intervalos con cambio de signo, pero requiere una transformación adecuada de la función.</p>
+<h2>Formula</h2>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mo>[</mo>
+    <mi>A</mi>
+    <mo>&#xA0;|&#xA0;</mo>
+    <mi>b</mi>
+    <mo>]</mo>
+    <mo>&#x2192;</mo>
+    <mo>[</mo>
+    <mi>I</mi>
+    <mo>&#xA0;|&#xA0;</mo>
+    <mi>x</mi>
+    <mo>]</mo>
+  </mrow>
+</math>
+<h2>algoritmo</h2>
+<ul>
+    <li>Empieca con el método de gauss</li>
+    <li>Convierte la matriz aumentada [A|B] en una forma muy simple llamada matriz identidad</li>
+    <li>Usa operaciones fila(sumar,restar,multiplicaciar ) para simplificar paso a paso</li>
+</ul>
+
+
 <h2>Aplicaciones del método de la secante ne la vida cotidiana</h2>
 <p> Los métodos de Gauss y Gauss-Jordan tienen múltiples aplicaciones, especialmente en campos donde se resuelven sistemas de ecuaciones lineales:
 Ingeniería (análisis de estructuras, circuitos eléctricos).

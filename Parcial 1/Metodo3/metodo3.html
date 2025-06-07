@@ -14,15 +14,78 @@
     <div class ="contenedor">
     <h1>Metodo: secante </h1>
     <div class="separador"></div> <!-- Línea separadora -->
-    <a href="/Parcial 1/Metodo1/metodo1.html">Regresar</a>
+    <a href="/Parcial 1/menu.html">Regresar</a>
     <a href="/Parcial 1/Excel/Metodo de Secante (1).xlsx">Metodo</a>
+    <a href="/Parcial 1/Metodo3/Metodo de secante_250606_204418.pdf" target="_blank">Ejemplo</a>
     <h2>Definicion</h2>
     <p> El método de la secante es un procedimiento numérico iterativo utilizado para encontrar una raíz de una función real f(x), es decir, un valor de x tal que f(x)=0 f(x)=0. Este método utiliza una aproximación lineal de la función mediante una recta secante que pasa por dos puntos cercanos sobre la gráfica de la función.</p>
     <h2>Antecedentes del método</h2>
     <p>El método de la secante se desarrolló como una alternativa al método de Newton-Raphson, que requiere calcular derivadas.
     Se basa en ideas que vienen desde el cálculo infinitesimal y las aproximaciones sucesivas de funciones.
     Históricamente, métodos iterativos para resolver ecuaciones no lineales se usaban desde los siglos XVII y XVIII.</p>
-<h2>Relaicon con otros métodos</h2>
+<h2>Formula</h2>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+    <msub>
+    <mi>x</mi>
+    <mrow>
+        <mi>r</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub><mi>x</mi><mi>r</mi></msub>
+  <mo>-</mo>
+  <mrow>
+    <mo>(</mo>
+    <mi>f</mi>
+    <mo>(</mo>
+    <msub><mi>x</mi><mi>r</mi></msub>
+    <mo>)</mo>
+    <mo>)</mo>
+  </mrow>
+  <mo>&#x2062;</mo> <!-- Invisible Times -->
+  <mfrac>
+    <mrow>
+      <msub><mi>x</mi><mi>r</mi></msub>
+      <mo>-</mo>
+      <msub>
+        <mi>x</mi>
+        <mrow>
+          <mi>r</mi>
+          <mo>-</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+    </mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo>(</mo>
+      <msub><mi>x</mi><mi>r</mi></msub>
+      <mo>)</mo>
+      <mo>-</mo>
+      <mi>f</mi>
+      <mo>(</mo>
+      <msub>
+        <mi>x</mi>
+        <mrow>
+          <mi>r</mi>
+          <mo>-</mo>
+          <mn>1</mn>
+        </mrow>
+      </msub>
+      <mo>)</mo>
+    </mrow>
+  </mfrac>
+</math>
+<h2>Algoritmo</h2>
+
+<li>Usa dos puntos iniciales <em>x<sub>0</sub></em> y <em>x<sub>1</sub></em>.</li>
+    <li>Traza una recta secante entre esos dos puntos y encuentra dónde esa recta cruza el eje <em>x</em>.</li>
+    <li>Esa intersección se toma como una mejor aproximación de la raíz.</li>
+
+    <h2>Relaicon con otros métodos</h2>
 <p>El método de la secante se relaciona principalmente con:
     Método de Newton-Raphson: ambos buscan raíces, pero la secante reemplaza la derivada por una diferencia finita.
     Método de bisección: mientras que la bisección garantiza convergencia pero es lenta, la secante es más rápida pero no garantiza convergencia.

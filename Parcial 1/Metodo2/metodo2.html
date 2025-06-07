@@ -12,11 +12,12 @@
 <body>
     <div id="particles-js"></div>
     <div class="contenedor">
-        <h1>Metodo: Newton Newton-Raphson</h1>
+        <h1>Metodo: Newton-Raphson</h1>
         <div class="separador"></div>
         <nav>
-            <a href="/Parcial 1/Metodo1/metodo1.html">Regresar</a>
+            <a href="/Parcial 1/menu.html">Regresar</a>
             <a href="/Parcial 1/Excel/Newton-Raphson (3).xlsx">Metodo</a>
+            <a href="/Parcial 1/Metodo2/Newton Raphston_250606_204511.pdf" target="_blank">Ejmplo</a>
         </nav>
 
         <h2>Definición</h2>
@@ -36,6 +37,40 @@ La versión de Raphson es la más cercana a cómo usamos el método hoy en día.
 <h3>Ralphson vs Newton</h3>
 <p>Aunque a menudo se le atribuye a Newton el método, la forma moderna que usamos fue mejor explicada por Raphson.
 Es por esto que el método es conocido como Newton-Raphson, reconociendo las contribuciones de ambos.</p>
+        <h2>Formula</h2>
+
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>x</mi>
+    <mrow>
+      <mi>r</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <msub><mi>x</mi><mi>r</mi></msub>
+  <mo>-</mo>
+  <mfrac>
+    <mrow>
+      <mi>f</mi>
+      <mo>(</mo>
+      <msub><mi>x</mi><mi>r</mi></msub>
+      <mo>)</mo>
+    </mrow>
+    <mrow>
+      <msup>
+        <mi>f</mi>
+        <mo>'</mo>
+      </msup>
+      <mo>(</mo>
+      <msub><mi>x</mi><mi>r</mi></msub>
+      <mo>)</mo>
+    </mrow>
+  </mfrac>
+</math>
+
+
         <h2>Relación</h2>
         <h3>Meétodo de bisección</h3>
         <p>Divide un intervalo en dos partes y elige la mitad donde hay un cambio de signo.</p>
@@ -53,7 +88,7 @@ Es por esto que el método es conocido como Newton-Raphson, reconociendo las con
         </p>
 
         <h2>Algoritmo</h2>
-        <h2>Pasos del método:</h2>
+        <h3>Pasos del método:</h3>
     <ol>
     <li><strong>Elección del punto inicial <em>x<sub>0</sub></em>:</strong> Elige un punto cercano a la raíz esperada.</li>
     <li><strong>Evaluación de la función y su derivada:</strong> Calcula <code>f(x<sub>n</sub>)</code> y <code>f'(x<sub>n</sub>)</code>.</li>
