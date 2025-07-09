@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Montante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+<div class="contenedor">
+    <h1>Método de Interpolación y Método de Lagrange</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 2/menu.html">Regresar</a>
+      <a href="/Parcial 2/Metodo/" target="_blank">Ejemplo</a>
+    </nav>
+     <h2>1. Método de Interpolación</h2>
+    <h3>Definición del método</h3>
+    <p>
+        La interpolación es un método numérico que permite estimar el valor de una función para un punto no conocido, 
+        a partir de un conjunto de datos conocidos (pares de valores x, y). Se utiliza para construir nuevos puntos 
+        dentro del rango de un conjunto discreto de puntos conocidos.
+    </p>
+
+    <h3>Antecedentes y métodos relacionados</h3>
+    <p>
+        El concepto de interpolación tiene orígenes antiguos, como en la astronomía babilónica. Se formalizó con los 
+        trabajos de Newton y Gregory. Métodos relacionados:
+    </p>
+    <ul>
+        <li>Interpolación lineal</li>
+        <li>Interpolación polinómica (Lagrange y Newton)</li>
+        <li>Interpolación por splines</li>
+        <li>Ajuste de curvas</li>
+    </ul>
+
+    <h3>Fórmula matemática</h3>
+    <p>
+        El objetivo es encontrar un polinomio P(x) tal que:
+    </p>
+    <pre>
+P(x_i) = y_i   
+    </pre>
+
+    <h3>Algoritmo básico (Interpolación Lineal)</h3>
+    <ol>
+        <li>Dado un punto x entre x₀ y x₁, se calcula:<br>
+            <code>y = y₀ + ((x - x₀) * (y₁ - y₀)) / (x₁ - x₀)</code>
+        </li>
+        <li>Para más puntos, se usa interpolación polinómica.</li>
+    </ol>
+
+    <h3>Aplicaciones en la vida cotidiana</h3>
+    <ul>
+        <li>Previsión meteorológica</li>
+        <li>Visualización de gráficos</li>
+        <li>Reconocimiento de voz e imágenes</li>
+        <li>Simulación e ingeniería</li>
+        <li>Estimación de posiciones GPS</li>
+    </ul>
+
+    <h2>2. Método de Interpolación de Lagrange</h2>
+
+    <h3>Definición del método</h3>
+    <p>
+        El método de Lagrange es una técnica de interpolación polinómica que encuentra un único polinomio de grado n 
+        que pasa por n+1 puntos dados, sin necesidad de resolver sistemas de ecuaciones.
+    </p>
+
+    <h3>Antecedentes y métodos relacionados</h3>
+    <p>
+        Desarrollado por Joseph-Louis Lagrange en el siglo XVIII. Relacionado con:
+    </p>
+    <ul>
+        <li>Interpolación de Newton</li>
+        <li>Interpolación polinómica</li>
+        <li>Cuadratura numérica</li>
+    </ul>
+
+    <h3>Fórmula matemática</h3>
+    <p>El polinomio de Lagrange \( P(x) \) se define como:</p>
+    <pre>
+P(x) = Σ (y_i * L_i(x))
+
+donde: 
+L_i(x) = Π (x - x_j) / (x_i - x_j), para j ≠ i
+    </pre>
+
+    <h3>Algoritmo</h3>
+    <ol>
+        <li>Se tienen (x₀, y₀), (x₁, y₁), ..., (xₙ, yₙ)</li>
+        <li>Para cada i, construir L<sub>i</sub>(x)</li>
+        <li>Multiplicar L<sub>i</sub>(x) por y<sub>i</sub></li>
+        <li>Sumar todos los términos para obtener P(x)</li>
+    </ol>
+
+    <h3>Aplicaciones en la vida cotidiana</h3>
+    <ul>
+        <li>Restauración de imágenes</li>
+        <li>Control automático</li>
+        <li>Modelado económico</li>
+        <li>Simulación en física e ingeniería</li>
+        <li>Procesamiento de señales digitales</li>
+    </ul>
+
+ 
+<script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</div>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Montante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+<div class="contenedor">
+    <h1>Método de Montante</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 2/menu.html">Regresar</a>
+      <a href="/Parcial 2/Metodo/Metodo de montante_250626_202442.pdf" target="_blank">Ejemplo</a>
+    </nav>
+
+    <h3> Definición del método</h3>
+    <p>
+        El <strong>Método de Montante</strong> (también llamado método de Bareiss) es un algoritmo para resolver sistemas de ecuaciones lineales y calcular determinantes de matrices sin introducir fracciones hasta el final del proceso, trabajando mayormente con números enteros.
+    </p>
+
+    <h3> Antecedentes y métodos relacionados</h3>
+    <ul>
+        <li>Creado por <strong>Maurice Montante</strong> en los años 70.</li>
+        <li>Basado en el <strong>método de Gauss-Jordan</strong>.</li>
+        <li>Relacionado con:
+            <ul>
+                <li>Método de Gauss</li>
+                <li>Regla de Cramer</li>
+                <li>Métodos de eliminación</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3> Fórmula matemática</h3>
+    <p>
+        a'₍ᵢⱼ₎ = (a₍ₖₖ₎ · a₍ᵢⱼ₎ − a₍ᵢₖ₎ · a₍ₖⱼ₎) / d
+    </p>
+    <p>
+        Donde:<br>
+        <code>a'₍ᵢⱼ₎</code>: nuevo valor en la posición (i,j)<br>
+        <code>a₍ₖₖ₎</code>: pivote actual<br>
+        <code>a₍ᵢₖ₎, a₍ₖⱼ₎</code>: elementos relacionados con el pivote<br>
+        <code>d</code>: pivote anterior (1 en la primera iteración)
+    </p>
+
+    <h3> Algoritmo</h3>
+    <ol>
+        <li>Construir la matriz aumentada del sistema.</li>
+        <li>Seleccionar el primer pivote (elemento en la diagonal).</li>
+        <li>Aplicar la fórmula para cada elemento que no está en la fila o columna del pivote.</li>
+        <li>Convertir en ceros los elementos fuera del pivote en su fila y columna.</li>
+        <li>Actualizar el pivote anterior y repetir para el siguiente pivote.</li>
+        <li>Al finalizar, la solución del sistema se encuentra en la última columna.</li>
+    </ol>
+
+    <h3> Aplicaciones en la vida cotidiana</h3>
+    <ul>
+        <li><strong>Ingeniería eléctrica:</strong> análisis de circuitos eléctricos.</li>
+        <li><strong>Economía:</strong> resolución de modelos económicos con sistemas lineales.</li>
+        <li><strong>Informática:</strong> resolución simbólica de ecuaciones sin errores de redondeo.</li>
+        <li><strong>Educación:</strong> método útil para enseñar álgebra lineal.</li>
+    </ul>
+
+<script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</div>
+</html>

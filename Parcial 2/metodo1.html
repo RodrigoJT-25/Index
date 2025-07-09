@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Gauss-Seidel y Método de Jacobi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método de Gauss-Seidel y Método de Jacobi</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 2/menu.html">Regresar</a>
+      <a href="/Parcial 2/Metodo/Método de GaussSeidel y Método de Jacobi_250622_150401.pdf" target="_blank">Ejemplo</a>
+    </nav>
+
+        <h2> MÉTODO DE JACOBI</h2>
+
+    <h3> 1. Definición</h3>
+    <p>El método de Jacobi es un método iterativo usado para resolver sistemas de ecuaciones lineales del tipo <code>Ax = b</code>. Cada componente del nuevo vector de soluciones se calcula usando solo los valores de la iteración anterior.</p>
+
+    <h3>2. Antecedentes y Métodos Relacionados</h3>
+    <ul>
+      <li>Desarrollado por Carl Gustav Jacobi en el siglo XIX.</li>
+      <li>Relacionado con:
+        <ul>
+          <li>Método de Gauss-Seidel</li>
+          <li>Métodos directos como Eliminación de Gauss</li>
+          <li>Métodos iterativos modernos</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3> 3. Fórmula Matemática</h3>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <msup><mi>x</mi><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msup>
+    <mo>=</mo>
+    <msup><mi>D</mi><mo>−1</mo></msup>
+    <mo>(</mo>
+        <mi>b</mi>
+        <mo>−</mo>
+        <mo>(</mo><mi>L</mi><mo>+</mo><mi>U</mi><mo>)</mo>
+        <msup><mi>x</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></msup>
+    <mo>)</mo>
+    </math>
+
+    <h3> 4. Algoritmo Paso a Paso</h3>
+    <ol>
+        <li>Reescribir el sistema aislando cada variable.</li>
+        <li>Elegir una aproximación inicial <code>x^(0)</code>.</li>
+        <li>Calcular todas las variables usando la fórmula de Jacobi.</li>
+        <li>Actualizar todas al final de cada iteración.</li>
+        <li>Repetir hasta alcanzar el error deseado.</li>
+    </ol>
+
+    <h3> 5. Aplicaciones en la Vida Cotidiana</h3>
+    <ul>
+        <li>Modelado computacional de flujos de calor.</li>
+        <li>Problemas estructurales en ingeniería.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2> MÉTODO DE GAUSS-SEIDEL</h2>
+
+    <h3> 1. Definición</h3>
+    <p>El método de Gauss-Seidel también resuelve <code>Ax = b</code>, pero mejora la eficiencia usando los valores más recientes conforme se calculan.</p>
+
+    <h3> 2. Antecedentes y Métodos Relacionados</h3>
+    <ul>
+      <li>Nombrado por Carl Friedrich Gauss y Philipp Seidel.</li>
+      <li>Relacionado con:
+        <ul>
+          <li>Método de Jacobi</li>
+          <li>Método SOR (Successive Over Relaxation)</li>
+          <li>Métodos modernos iterativos</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3> 3. Fórmula Matemática</h3>
+ <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <msup><mi>x</mi><mrow><mo>(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msup>
+    <mo>=</mo>
+    <msup><mrow><mo>(</mo><mi>D</mi><mo>+</mo><mi>L</mi><mo>)</mo></mrow><mo>−1</mo></msup>
+    <mo>(</mo>
+      <mi>b</mi>
+      <mo>−</mo>
+      <mi>U</mi>
+      <msup><mi>x</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></msup>
+    <mo>)</mo>
+  </math>
+
+    <h3> 4. Algoritmo Paso a Paso</h3>
+    <ol>
+      <li>Reescribir el sistema aislando cada variable.</li>
+      <li>Establecer una estimación inicial.</li>
+      <li>Para cada variable, usar la fórmula con valores actualizados.</li>
+      <li>Repetir hasta converger.</li>
+    </ol>
+
+    <h3> 5. Aplicaciones en la Vida Cotidiana</h3>
+    <ul>
+      <li>Simulación de estructuras físicas.</li>
+      <li>Análisis de circuitos eléctricos.</li>
+      <li>Simulación de fluidos y calor.</li>
+    </ul>
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

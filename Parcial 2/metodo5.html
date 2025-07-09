@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Montante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+<div class="contenedor">
+    <h1>Método de regresión lineal múltiple</h1>
+    <div class="separador"></div>
+    <nav>
+        <a href="/Parcial 2/menu.html">Regresar</a>
+            <a href="/Parcial 2/Excel/Metodo de Regresión Lineal multiple.xlsx">Metodo</a>
+        <a href="/Parcial 2/Metodo/Método de regresión lineal simple_250703_232939.pdf" target="_blank">Ejemplo</a>
+    </nav>
+    <h2> Definición del método</h2>
+<p>
+La <strong>regresión lineal múltiple</strong> es un método estadístico que permite modelar la relación entre una <em>variable dependiente</em> (Y) y <em>dos o más variables independientes</em> (X₁, X₂, ..., Xₖ). El objetivo es encontrar una ecuación lineal que prediga Y en función de las X, minimizando los errores entre los valores reales y los estimados.
+</p>
+
+<h2> Antecedentes del método y con qué otros métodos se relaciona</h2>
+<ul>
+<li>Es una extensión de la <strong>regresión lineal simple</strong>, que sólo utiliza una variable independiente.</li>
+<li>Tiene raíces en el trabajo de <strong>Francis Galton</strong> (siglo XIX) al estudiar la herencia de características físicas.</li>
+<li>Fue formalizada y desarrollada por <strong>Karl Pearson</strong> y <strong>Ronald Fisher</strong> en el campo de la estadística.</li>
+<li>Se relaciona con métodos como:
+  <ul>
+    <li>Regresión polinómica.</li>
+    <li>Regresión logística.</li>
+    <li>Análisis de varianza (ANOVA).</li>
+    <li>Redes neuronales y otros modelos predictivos.</li>
+  </ul>
+</li>
+</ul>
+
+<h2> Fórmula matemática que lo define</h2>
+<p>
+El modelo general se expresa así:
+</p>
+<p style="text-align:center;">
+Y = β₀ + β₁X₁ + β₂X₂ + ⋯ + βₖXₖ + ε
+</p>
+<p>
+Donde:
+</p>
+<ul>
+<li><strong>Y</strong>: variable dependiente.</li>
+<li><strong>X₁, X₂, ..., Xₖ</strong>: variables independientes.</li>
+<li><strong>β₀</strong>: intercepto (ordenada en el origen).</li>
+<li><strong>β₁, β₂, ..., βₖ</strong>: coeficientes que indican el efecto de cada X sobre Y.</li>
+<li><strong>ε</strong>: término de error aleatorio.</li>
+</ul>
+
+<h2> Algoritmo</h2>
+<ol>
+<li>Recopilar y organizar los datos de Y y X₁, X₂, ..., Xₖ.</li>
+<li>Construir la matriz de diseño X (incluyendo una columna de 1 para el intercepto).</li>
+<li>Calcular los coeficientes β usando la fórmula de mínimos cuadrados:
+  <p style="text-align:center;">
+  β = (XᵀX)<sup>-1</sup> XᵀY
+  </p>
+</li>
+<li>Obtener las predicciones de Y con los valores calculados de β.</li>
+<li>Evaluar el modelo con métricas como R², error estándar, etc.</li>
+</ol>
+
+<h2> Aplicación en la vida cotidiana</h2>
+<ul>
+<li><strong>Medicina</strong>: analizar cómo factores como edad, dieta y actividad física afectan la presión arterial.</li>
+<li><strong>Marketing</strong>: evaluar cómo las promociones y campañas publicitarias afectan las ventas.</li>
+<li><strong>Ingeniería</strong>: estimar el desgaste de una máquina considerando varios factores operativos.</li>
+</ul>
+
+<script src="/js/particles.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</div>
+</html>

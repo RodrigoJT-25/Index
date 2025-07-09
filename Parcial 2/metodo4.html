@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Montante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+<div class="contenedor">
+    <h1> Método de regresión lineal simple </h1>
+    <div class="separador"></div>
+    <nav>
+        <a href="/Parcial 2/menu.html">Regresar</a>
+            <a href="/Parcial 2/Excel/Metodo de regresion lineal simple.xlsx">Metodo</a>
+        <a href="/Parcial 2/Metodo/Método de regresión lineal simple_250703_232939.pdf" target="_blank">Ejemplo</a>
+    </nav>
+
+<h2> Definición del método</h2>
+<p>
+La <strong>regresión lineal simple</strong> es un método estadístico que se utiliza para analizar la relación entre dos variables cuantitativas:
+<ul>
+<li>Una variable independiente o explicativa (<em>x</em>)</li>
+<li>Una variable dependiente o de respuesta (<em>y</em>)</li>
+</ul>
+El objetivo es encontrar la <strong>recta que mejor se ajusta</strong> a los datos de tal forma que permita predecir valores de <em>y</em> a partir de valores de <em>x</em>.
+</p>
+
+<h2> Antecedentes del método y métodos relacionados</h2>
+<p>
+Este método fue introducido formalmente por <strong>Francis Galton</strong> y <strong>Karl Pearson</strong> a finales del siglo XIX, aunque sus bases matemáticas ya se utilizaban antes en astronomía y física para ajustar datos experimentales.
+</p>
+<p>Está relacionado con:</p>
+<ul>
+<li>La <strong>correlación</strong>, que mide la fuerza y dirección de la relación entre las variables.</li>
+<li>La <strong>regresión múltiple</strong>, que extiende la idea a más de una variable independiente.</li>
+<li>El <strong>método de mínimos cuadrados</strong>, que es la técnica matemática para ajustar la recta minimizando los errores.</li>
+</ul>
+
+<h2> Fórmula matemática</h2>
+<p>
+La ecuación de la regresión lineal simple es:
+</p>
+<p><strong>y = b₀ + b₁ x</strong></p>
+<p>Donde:</p>
+<ul>
+<li><strong>y</strong>: valor predicho de la variable dependiente</li>
+<li><strong>x</strong>: valor conocido de la variable independiente</li>
+<li><strong>b₀</strong>: intercepto o constante (valor de <em>y</em> cuando <em>x</em> = 0)</li>
+<li><strong>b₁</strong>: pendiente de la recta (cambio en <em>y</em> por cada unidad de cambio en <em>x</em>)</li>
+</ul>
+
+<p>Los coeficientes <strong>b₀</strong> y <strong>b₁</strong> se calculan con las fórmulas:</p>
+<p>
+<b>b₁ = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)²</b><br>
+<b>b₀ = ȳ - b₁ x̄</b>
+</p>
+
+<h2> Algoritmo paso a paso</h2>
+<ol>
+<li>Recolectar los datos de las dos variables <em>x</em> y <em>y</em>.</li>
+<li>Calcular las medias de <em>x</em> (<em>x̄</em>) y <em>y</em> (<em>ȳ</em>).</li>
+<li>Calcular la pendiente <em>b₁</em> usando la fórmula anterior.</li>
+<li>Calcular el intercepto <em>b₀</em>.</li>
+<li>Construir la ecuación de la recta: <em>y = b₀ + b₁ x</em>.</li>
+<li>Usar la ecuación para hacer predicciones o interpretar la relación.</li>
+</ol>
+
+<h2> Aplicaciones en la vida cotidiana</h2>
+<p>El método de regresión lineal simple tiene muchas aplicaciones prácticas, por ejemplo:</p>
+<ul>
+<li><strong>Economía y finanzas:</strong> predecir ventas en función de la publicidad, o ingresos en función de la experiencia.</li>
+<li><strong>Educación:</strong> analizar la relación entre horas de estudio y calificaciones.</li>
+<li><strong>Industria:</strong> predecir la producción en función del número de trabajadores.</li>
+<li><strong>Climatología:</strong> estimar la temperatura en función de la altitud o la hora del día.</li>
+</ul>
+
+<script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</div>
+</html>

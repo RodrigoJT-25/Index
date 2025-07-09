@@ -110,6 +110,7 @@ a:hover::before {
 nav{
     /* Bottonoes horizontales*/
     display: flex;
+    flex-wrap: wrap; /*  Permite que los botones salten a la siguiente línea */
     gap: 10px; /* Espacio entre botones */
     justify-content: center; /* Centrado horizontal (opcional) */
     margin-top: 20px;
