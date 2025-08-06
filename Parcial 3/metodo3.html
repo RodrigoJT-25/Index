@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simpson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método de Simpson</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 3/menu.html">Regresar</a>
+      <a href="/Parcial 3/Excel/Metodo de simpson (1).xlsx (1).xlsx"target="_blank">metodo</a>
+      <a href="/Parcial 3/Metodos/Metodo de simpson_250724_194803.pdf" target="_blank">Ejemplo</a>
+    </nav>
+    <h2> Definición del método</h2>
+<p>
+El método de Simpson es una técnica de integración numérica que aproxima el valor de una integral definida <code>∫a^b f(x) dx</code> usando polinomios interpolantes.
+</p>
+<ul>
+  <li>El <strong>método de Simpson 1/3</strong> usa un polinomio de segundo grado (parábola) para aproximar la curva de <code>f(x)</code> en cada subintervalo.</li>
+  <li>El <strong>método de Simpson 3/8</strong> usa un polinomio de tercer grado (cúbica) para mejorar la aproximación en ciertos casos.</li>
+</ul>
+
+<h2> Antecedentes del método y con qué otros métodos se relaciona</h2>
+<p>
+Estos métodos derivan del trabajo de <strong>Thomas Simpson (1710–1761)</strong>, aunque ya habían sido descubiertos anteriormente por matemáticos como Newton y Cotes.
+</p>
+<p>Se relacionan con:</p>
+<ul>
+  <li>Regla del trapecio (grado 1)</li>
+  <li>Cuadratura de Newton-Cotes</li>
+  <li>Métodos de integración adaptativa</li>
+  <li>Métodos de Romberg y cuadratura de Gauss</li>
+</ul>
+
+<h2> Fórmulas matemáticas</h2>
+
+<h3>Método de Simpson 1/3:</h3>
+<p>
+Para una integral en <code>[a,b]</code> con un número par de subintervalos <code>n</code>:
+</p>
+<pre>
+∫a^b f(x) dx ≈ (h/3) [ f(x₀) + 4 Σf(xᵢ) (i impares) + 2 Σf(xᵢ) (i pares) + f(xₙ) ]
+</pre>
+<p>donde <code>h = (b-a)/n</code> y <code>xᵢ = a + i·h</code>.</p>
+
+<h3>Método de Simpson 3/8:</h3>
+<p>
+Para una integral en <code>[a,b]</code> con un número de subintervalos <code>n</code> múltiplo de 3:
+</p>
+<pre>
+∫a^b f(x) dx ≈ (3h/8) [ f(x₀) + 3 Σf(xᵢ) (i ≠ múltiplo de 3) + 2 Σf(xᵢ) (i múltiplo de 3) + f(xₙ) ]
+</pre>
+<p>donde <code>h = (b-a)/n</code> y <code>xᵢ = a + i·h</code>.</p>
+
+<h2> Algoritmo</h2>
+
+<h3>Para Simpson 1/3:</h3>
+<ol>
+  <li>Dividir el intervalo <code>[a,b]</code> en un número <strong>par</strong> <code>n</code> de subintervalos.</li>
+  <li>Calcular <code>h = (b-a)/n</code>.</li>
+  <li>Evaluar <code>f(x)</code> en los puntos <code>x₀, x₁, ..., xₙ</code>.</li>
+  <li>Aplicar la fórmula del método 1/3.</li>
+  <li>Sumar los términos y multiplicar por <code>h/3</code>.</li>
+</ol>
+
+<h3>Para Simpson 3/8:</h3>
+<ol>
+  <li>Dividir el intervalo <code>[a,b]</code> en un número <code>n</code> de subintervalos múltiplo de 3.</li>
+  <li>Calcular <code>h = (b-a)/n</code>.</li>
+  <li>Evaluar <code>f(x)</code> en los puntos <code>x₀, x₁, ..., xₙ</code>.</li>
+  <li>Aplicar la fórmula del método 3/8.</li>
+  <li>Sumar los términos y multiplicar por <code>3h/8</code>.</li>
+</ol>
+
+<h2> Aplicaciones en la vida cotidiana</h2>
+<ul>
+  <li>Cálculo de áreas o volúmenes cuando la función no tiene una primitiva sencilla (por ejemplo, mediciones experimentales).</li>
+  <li>Ingeniería civil: para calcular áreas bajo curvas de esfuerzo-deformación o de caudales en ríos.</li>
+  <li>Física: para estimar trabajo realizado cuando la fuerza varía no linealmente.</li>
+  <li>Economía: para calcular áreas bajo curvas de costos o ingresos.</li>
+  <li>Ciencias ambientales: para estimar el área cubierta por una especie en un ecosistema.</li>
+</ul>
+
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

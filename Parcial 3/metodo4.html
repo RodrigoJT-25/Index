@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Gauss-Seidel y Método de Jacobi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método de Romberg y Richardson.</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 3/menu.html">Regresar</a>
+      <a href="/Parcial 3/Excel/Método de Trapecio. (1).xlsx"target="_blank">metodo</a>
+      <a href="/Parcial 3/Metodos/Metodo de trapecio_250721_184657.pdf" target="_blank">Ejemplo</a>
+    </nav>
+    <h2>Método de Romberg</h2>
+
+<h3>Definición</h3>
+<p>
+El <strong>Método de Romberg</strong> es una técnica de integración numérica que mejora la precisión de la <em>regla del trapecio</em> mediante la extrapolación de Richardson. Parte de calcular aproximaciones sucesivas de la integral con intervalos cada vez más pequeños y combina estos resultados para obtener una estimación más precisa.
+</p>
+
+<h3>Antecedentes y relación con otros métodos</h3>
+<ul>
+<li>Se basa en la <strong>Regla del trapecio</strong> y la idea de que el error disminuye conforme el paso \( h \) se hace menor.</li>
+<li>Utiliza la <strong>extrapolación de Richardson</strong>, que consiste en combinar estimaciones con diferente \( h \) para eliminar los términos principales del error.</li>
+<li>Relacionado con: Trapecio, Simpson, Cuadratura de Gauss.</li>
+</ul>
+
+<h3>Fórmula matemática</h3>
+<p>
+Si \( R(k, 0) \) son las aproximaciones con la regla del trapecio para \( 2^k \) subintervalos, la fórmula para mejorar la aproximación es:
+</p>
+<pre>
+R(k, j) = [4^j * R(k, j-1) - R(k-1, j-1)] / (4^j - 1)
+</pre>
+
+<h3>Algoritmo</h3>
+<ol>
+<li>Escoger el número de subdivisiones inicial y el número de iteraciones deseadas.</li>
+<li>Calcular \( R(0,0) \) usando la regla del trapecio con un solo intervalo.</li>
+<li>Para cada \( k=1,2,...,n \): 
+    <ul>
+        <li>Calcular \( R(k,0) \) usando la regla del trapecio con \( 2^k \) intervalos.</li>
+        <li>Para cada \( j=1,2,...,k \), calcular \( R(k,j) \) usando la fórmula de extrapolación.</li>
+    </ul>
+</li>
+<li>Repetir hasta que la diferencia entre las aproximaciones sucesivas sea menor a un error deseado.</li>
+<li>La mejor aproximación está en \( R(k,k) \).</li>
+</ol>
+
+<h3>Aplicación en la vida cotidiana</h3>
+<ul>
+<li>Cálculo de áreas y volúmenes en ingeniería y física cuando la función no se puede integrar exactamente.</li>
+<li>Evaluación de integrales definidas en simulaciones de sistemas dinámicos.</li>
+<li>Procesamiento de señales e imágenes.</li>
+<li>En finanzas, para estimar valores presentes de flujos complejos.</li>
+</ul>
+
+<hr>
+
+<h2>Método de Richardson</h2>
+
+<h3>Definición</h3>
+<p>
+La <strong>extrapolación de Richardson</strong> es una técnica para mejorar la precisión de un cálculo aproximado eliminando los términos principales del error. Se aplica cuando el error de un método depende de una potencia conocida de \( h \).
+</p>
+
+<h3>Antecedentes y relación con otros métodos</h3>
+<ul>
+<li>Propuesto por Lewis Fry Richardson.</li>
+<li>Se utiliza ampliamente en integración y diferenciación numérica.</li>
+<li>Relacionado con: métodos de integración (Trapecio, Romberg, Simpson) y diferenciación numérica.</li>
+</ul>
+
+<h3>Fórmula matemática</h3>
+<p>
+Si \( A(h) \) es una aproximación con error \( O(h^p) \), entonces:
+</p>
+<pre>
+A* = [2^p * A(h/2) - A(h)] / (2^p - 1)
+</pre>
+
+<h3>Algoritmo</h3>
+<ol>
+<li>Calcular la aproximación \( A(h) \) con un tamaño de paso \( h \).</li>
+<li>Calcular la aproximación \( A(h/2) \) con un paso menor.</li>
+<li>Aplicar la fórmula de Richardson para combinar ambas aproximaciones y eliminar el término principal del error.</li>
+<li>Repetir si se desea aún más precisión.</li>
+</ol>
+
+<h3>Aplicación en la vida cotidiana</h3>
+<ul>
+<li>Mejora en los cálculos de áreas, derivadas e integrales.</li>
+<li>En física, para mediciones experimentales con reducción de error.</li>
+<li>En simulaciones computacionales para obtener resultados más precisos.</li>
+</ul>
+
+<hr>
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

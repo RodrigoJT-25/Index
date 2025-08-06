@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Gauss-Seidel y Método de Jacobi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método de Runge-Kutta.</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 3/menu.html">Regresar</a>
+      <a href="/Parcial 3/Excel/Método de Trapecio. (1).xlsx"target="_blank">metodo</a>
+      <a href="/Parcial 3/Metodos/Metodo de trapecio_250721_184657.pdf" target="_blank">Ejemplo</a>
+    </nav>
+<div class="section">
+  <h2>Definición del método</h2>
+  <p>
+    El <strong>método de Runge-Kutta</strong> es una familia de métodos numéricos iterativos para aproximar soluciones de ecuaciones diferenciales ordinarias de la forma:<br>
+    <code>dy/dx = f(x, y), &nbsp; y(x₀) = y₀</code><br>
+    Permite calcular aproximaciones con mayor precisión que el método de Euler, sin requerir derivadas de orden superior.  
+    El más conocido es el <strong>Runge-Kutta de cuarto orden (RK4)</strong>.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Antecedentes del método y con qué otros métodos se relaciona</h2>
+  <p>
+    Desarrollado por <strong>Carl Runge (1895)</strong> y <strong>Wilhelm Kutta (1901)</strong>.<br>
+    Es una mejora y generalización del <strong>método de Euler</strong> y del <strong>método del punto medio</strong>.<br>
+    Pertenece a la clase de métodos de <em>un solo paso</em>, en contraste con los métodos de <em>pasos múltiples</em> como Adams-Bashforth.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Fórmula matemática (RK4)</h2>
+  <p>Las siguientes fórmulas se usan para calcular <code>yₙ₊₁</code> a partir de <code>yₙ</code> y paso <code>h</code>:</p>
+  <pre>
+k₁ = f(xₙ, yₙ)
+
+k₂ = f(xₙ + h/2, yₙ + h/2·k₁)
+
+k₃ = f(xₙ + h/2, yₙ + h/2·k₂)
+
+k₄ = f(xₙ + h, yₙ + h·k₃)
+
+yₙ₊₁ = yₙ + h/6 (k₁ + 2k₂ + 2k₃ + k₄)
+  </pre>
+</div>
+
+<div class="section">
+  <h2>Algoritmo</h2>
+  <ol>
+    <li>Inicializar los valores <code>x₀</code>, <code>y₀</code> y el tamaño de paso <code>h</code>.</li>
+    <li>Calcular <code>k₁, k₂, k₃, k₄</code> usando las fórmulas anteriores.</li>
+    <li>Actualizar <code>yₙ₊₁ = yₙ + (h/6)(k₁ + 2k₂ + 2k₃ + k₄)</code>.</li>
+    <li>Actualizar <code>xₙ₊₁ = xₙ + h</code>.</li>
+    <li>Repetir los pasos 2–4 hasta alcanzar el valor deseado de <code>x</code>.</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>Aplicaciones en la vida cotidiana</h2>
+  <p>
+    El método de Runge-Kutta se aplica ampliamente en ciencias e ingeniería para modelar sistemas dinámicos, por ejemplo:
+  </p>
+  <ul>
+    <li> Simulación de movimientos de planetas y satélites.</li>
+    <li> Diseño de circuitos eléctricos y electrónicos.</li>
+    <li> Modelado de trayectorias de vehículos y robots.</li>
+    <li> Procesos químicos y reacciones cinéticas.</li>
+    <li> Modelos biológicos de crecimiento poblacional o propagación de enfermedades.</li>
+  </ul>
+</div>
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Montante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método de Diferencias Divididas</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 3/menu.html">Regresar</a>
+      <a href="/Parcial 3/Metodos/Metodo de diferencias divididas_250724_193024.pdf" target="_blank">Ejemplo</a>
+      <a href="/Parcial 3/Excel/Metodos diferencias divididas.xlsx">Método</a>
+    </nav>
+
+    <h2>Definición del método</h2>
+    <p>
+      El <strong>método de diferencias divididas de Newton</strong> es un procedimiento para encontrar un polinomio que interpola un conjunto de puntos dados 
+      (x₀, y₀), (x₁, y₁), …, (xₙ, yₙ). Este método utiliza el concepto de <strong>diferencias divididas</strong>, que son coeficientes calculados 
+      de forma recursiva a partir de los valores de las funciones y de las abscisas. Es especialmente útil cuando los puntos no están igualmente espaciados.
+    </p>
+
+    <h2>Antecedentes del método y con qué otros métodos se relaciona</h2>
+    <p>
+      El método fue desarrollado por <strong>Isaac Newton</strong> en el siglo XVII como parte de su trabajo en análisis numérico. 
+      Está estrechamente relacionado con otros métodos de interpolación polinómica, como:
+    </p>
+    <ul>
+      <li>Interpolación de Lagrange</li>
+      <li>Método de diferencias finitas</li>
+      <li>Interpolación spline</li>
+    </ul>
+
+    <h2>Fórmula matemática que lo define</h2>
+    <p>
+      El polinomio interpolante de Newton con diferencias divididas se expresa como:
+    </p>
+    <p>
+      <code>
+        P(x) =
+        f[x₀] + f[x₀,x₁](x-x₀) + f[x₀,x₁,x₂](x-x₀)(x-x₁) + … +
+        f[x₀,…,xₙ](x-x₀)(x-x₁)…(x-xₙ₋₁)
+      </code>
+    </p>
+    <p>
+      Donde las diferencias divididas se calculan recursivamente:
+    </p>
+    <p>
+      <code>f[x₀] = y₀</code><br>
+      <code>f[x₀,x₁] = (f[x₁] - f[x₀]) / (x₁ - x₀)</code><br>
+      <code>f[x₀,x₁,x₂] = (f[x₁,x₂] - f[x₀,x₁]) / (x₂ - x₀)</code> y así sucesivamente.
+    </p>
+
+    <h2>Algoritmo</h2>
+    <ol>
+      <li>Ingresar los valores xᵢ y yᵢ.</li>
+      <li>Inicializar la primera columna con yᵢ.</li>
+      <li>Para cada orden k, calcular:
+        <br>
+        <code>
+          f[xᵢ, ..., xᵢ₊ₖ] =
+          (f[xᵢ₊₁, ..., xᵢ₊ₖ] - f[xᵢ, ..., xᵢ₊ₖ₋₁]) / (xᵢ₊ₖ - xᵢ)
+        </code>
+      </li>
+      <li>Repetir hasta completar todas las diferencias.</li>
+      <li>Formar el polinomio con los coeficientes obtenidos.</li>
+    </ol>
+
+    <h2>Aplicación en la vida cotidiana</h2>
+    <p>El método de diferencias divididas tiene aplicaciones en:</p>
+    <ul>
+      <li>Ingeniería: para aproximar funciones complejas cuando solo se conocen valores discretos.</li>
+      <li>Física: para interpolar mediciones experimentales y estimar valores intermedios.</li>
+      <li>Economía: para construir modelos predictivos a partir de datos históricos.</li>
+      <li>Computación gráfica: para calcular curvas y superficies suaves a partir de puntos de control.</li>
+      <li>Astronomía: para calcular órbitas o trayectorias de cuerpos celestes a partir de observaciones.</li>
+    </ul>
+  </div>
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método de Gauss-Seidel y Método de Jacobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="contenedor">
+    <h1>Método de Euler y Euler modificado</h1>
+    <div class="separador"></div>
+    <nav>
+        <a href="/Parcial 3/menu.html">Regresar</a>
+        <a href="/Parcial 3/Excel/Método de Trapecio. (1).xlsx"target="_blank">metodo</a>
+        <a href="/Parcial 3/Metodos/Metodo de trapecio_250721_184657.pdf" target="_blank">Ejemplo</a>
+    </nav>
+
+<h2>Método de Euler</h2>
+<h3>Definición</h3>
+<p>
+El <strong>Método de Euler</strong> es un procedimiento numérico para aproximar la solución de una ecuación diferencial ordinaria (EDO) de la forma:<br>
+<em>dy/dx = f(x, y), &nbsp; y(x₀) = y₀</em><br>
+Es un método <strong>explícito</strong> y de primer orden que utiliza la pendiente en el punto actual para estimar el valor de la función en el siguiente punto.
+</p>
+
+<h3>Antecedentes y métodos relacionados</h3>
+<ul>
+  <li>Propuesto por <strong>Leonhard Euler</strong> en el siglo XVIII.</li>
+  <li>Derivado de la fórmula de aproximación lineal de una función.</li>
+  <li>Relacionado con: Método de Taylor, Método de Runge-Kutta, Método del Trapecio.</li>
+</ul>
+
+<h3>Fórmula matemática</h3>
+<p><strong>yₙ₊₁ = yₙ + h · f(xₙ, yₙ)</strong></p>
+
+<h3>Algoritmo</h3>
+<ol>
+  <li>Establecer las condiciones iniciales: x₀, y₀, paso h, número de pasos N.</li>
+  <li>Para cada n = 0, 1, …, N-1:
+    <ul>
+      <li>Calcular <em>yₙ₊₁ = yₙ + h · f(xₙ, yₙ)</em></li>
+      <li>Avanzar <em>xₙ₊₁ = xₙ + h</em></li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Aplicaciones en la vida cotidiana</h3>
+<ul>
+  <li>Simular el crecimiento de poblaciones.</li>
+  <li>Predecir temperaturas en un sistema físico.</li>
+  <li>Calcular trayectorias en física y astronomía.</li>
+  <li>Modelar procesos químicos simples.</li>
+  <li>Usado en computación y gráficos para integrar movimientos.</li>
+</ul>
+
+<hr>
+
+<h2>Método de Euler Modificado (o del Punto Medio)</h2>
+
+<h3>Definición</h3>
+<p>
+El <strong>Método de Euler Modificado</strong>, también llamado <strong>método de punto medio o Heun</strong>, es una mejora del método de Euler. Usa una pendiente promedio entre el inicio y un punto estimado al final del intervalo.
+</p>
+
+<h3>Antecedentes y métodos relacionados</h3>
+<ul>
+  <li>Desarrollado posteriormente a Euler para mayor precisión.</li>
+  <li>Relacionado con: Método del Trapecio, Método de Runge-Kutta.</li>
+</ul>
+
+<h3>Fórmula matemática</h3>
+<p>
+Primero se calcula un predictor:<br>
+<em>y* = yₙ + h · f(xₙ, yₙ)</em><br>
+Luego se corrige tomando el promedio de las pendientes:<br>
+<em>yₙ₊₁ = yₙ + (h/2) [f(xₙ, yₙ) + f(xₙ₊₁, y*)]</em>
+</p>
+
+<h3>Algoritmo</h3>
+<ol>
+  <li>Establecer las condiciones iniciales: x₀, y₀, paso h, número de pasos N.</li>
+  <li>Para cada n = 0, 1, …, N-1:
+    <ul>
+      <li>Calcular predictor: <em>y* = yₙ + h · f(xₙ, yₙ)</em></li>
+      <li>Calcular corrector: <em>yₙ₊₁ = yₙ + (h/2) [f(xₙ, yₙ) + f(xₙ₊₁, y*)]</em></li>
+      <li>Avanzar <em>xₙ₊₁ = xₙ + h</em></li>
+    </ul>
+  </li>
+</ol>
+
+<h3>Aplicaciones en la vida cotidiana</h3>
+<ul>
+  <li>Simulación de circuitos eléctricos.</li>
+  <li>Modelos de propagación de enfermedades.</li>
+  <li>Problemas de dinámica en ingeniería.</li>
+  <li>Cálculos de trayectorias en mecánica y robótica.</li>
+  <li>Útil cuando la pendiente cambia rápidamente.</li>
+</ul>
+
+<hr>
+
+    <script src="/js/particles.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

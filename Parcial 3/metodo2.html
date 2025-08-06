@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método de Gauss-Seidel y Método de Jacobi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/Parcial 1/Metodo1/styles.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="contenedor">
+    <h1>Método del Trapecio</h1>
+    <div class="separador"></div>
+    <nav>
+      <a href="/Parcial 3/menu.html">Regresar</a>
+      <a href="/Parcial 3/Excel/Método de Trapecio. (1).xlsx"target="_blank">metodo</a>
+      <a href="/Parcial 3/Metodos/Metodo de trapecio_250721_184657.pdf" target="_blank">Ejemplo</a>
+    </nav>
+
+ 
+<h2> Definición del método</h2>
+<p>
+El <strong>Método del Trapecio</strong> es una técnica numérica para aproximar el valor de una <strong>integral definida</strong>. 
+Consiste en dividir el área bajo la curva de una función en un número de trapecios, calcular las áreas de esos trapecios y sumarlas. 
+Es un caso especial de las <em>fórmulas de Newton-Cotes</em> para aproximar integrales.
+</p>
+
+<h2> Antecedentes del método y con qué otros métodos se relaciona</h2>
+<p>
+Este método tiene raíces en la <strong>antigüedad</strong>, ya que los griegos y los babilonios ya usaban aproximaciones geométricas para calcular áreas. 
+Se formalizó más claramente durante los siglos XVII y XVIII con el desarrollo del cálculo integral.
+</p>
+<p>
+Se relaciona con otros métodos de integración numérica, como:
+<ul>
+  <li>La <strong>regla del punto medio</strong></li>
+  <li>La <strong>regla de Simpson</strong></li>
+  <li>Métodos de cuadratura en general</li>
+</ul>
+</p>
+
+<h2> Fórmula matemática que lo define</h2>
+<p>
+Si queremos aproximar la integral definida:
+</p>
+<p>
+<code>
+∫<sub>a</sub><sup>b</sup> f(x) dx
+</code>
+</p>
+<p>
+Dividimos el intervalo [a, b] en n subintervalos de longitud 
+<code>h = (b-a)/n</code>, y la fórmula del método del trapecio es:
+</p>
+<p>
+<code>
+∫<sub>a</sub><sup>b</sup> f(x) dx ≈ (h/2) [ f(x₀) + 2 Σ f(xᵢ) + f(xₙ) ]
+</code>
+</p>
+<p>
+Donde:
+<ul>
+  <li>x₀ = a</li>
+  <li>xₙ = b</li>
+  <li>xᵢ = a + i·h, para i = 1, 2, ..., n-1</li>
+</ul>
+</p>
+
+<h2> Algoritmo</h2>
+<ol>
+<li>Elegir el intervalo [a, b] y el número de subintervalos n.</li>
+<li>Calcular <code>h = (b-a)/n</code>.</li>
+<li>Calcular los puntos <code>xᵢ = a + i·h</code> para i = 0, 1, ..., n.</li>
+<li>Evaluar la función f(x) en cada xᵢ.</li>
+<li>Calcular la suma: 
+<code>S = f(x₀) + 2Σ f(xᵢ) + f(xₙ)</code></li>
+<li>Multiplicar por h/2 para obtener la aproximación de la integral.</li>
+</ol>
+
+<h2> Aplicaciones en la vida cotidiana</h2>
+<p>
+El método del trapecio es útil cuando no se puede calcular una integral de forma exacta. Algunas aplicaciones:
+</p>
+<ul>
+<li>En ingeniería, para estimar áreas o volúmenes a partir de datos experimentales.</li>
+<li>En economía, para calcular ingresos, costos o demanda aproximados.</li>
+<li>En física, para estimar trabajo realizado por una fuerza variable.</li>
+<li>En estadística, para aproximar probabilidades con distribuciones no estándar.</li>
+<li>En computación gráfica, para calcular áreas en modelos y simulaciones.</li>
+</ul>
+
+
+  <script src="/js/particles.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
